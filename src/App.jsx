@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getMeteo } from "./api/openmeteoApi";
 import Header from "./components/Header/Header";
+import Heading from "./components/Heading/Heading";
 import "./App.css";
 
 function App() {
@@ -27,7 +28,11 @@ function App() {
   return (
     <>
       <Header />
-      {meteo ? <h1>{meteo.temperature}</h1> : <h1>Caricamento in corso....</h1>}
+      {/* {meteo ? <h1>{meteo.temperature}</h1> : <h1>Caricamento in corso....</h1>} */}
+
+      <main>
+        <Heading />
+      </main>
     </>
   );
 }

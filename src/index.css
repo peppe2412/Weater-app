@@ -33,6 +33,11 @@ body {
   color: var(--neutral-0);
 }
 
+h1{
+  font-size: 2.5rem;
+}
+
+
 button{
   color: var(--neutral-0);
   border: none;
@@ -60,4 +65,46 @@ header{
   padding: 12px 15px 12px 15px;
   background-color: var(--neutral-700);
   border-radius: 10px;
+}
+
+.heading-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-container{
+  position: relative;
+  display: flex;
+  margin-top: 50px;
+}
+
+input[name="searchMeteo"]{
+  background-color: var(--neutral-700);
+  border: none;
+  padding: 15px 3rem 15px 3rem;
+  border-radius: 10px;
+  font-size: medium;
+  color: var(--neutral-0);
+}
+
+.icon-search{
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button-search{
+  background-color: var(--blue-500);
+  padding: 15px;
+  margin-left: 10px;
+  border-radius: 10px;
+  font-size: medium;
+  transition: 0.3s;
+}
+
+.button-search:hover{
+  background-color: var(--blue-700);
 }
