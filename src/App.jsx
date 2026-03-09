@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import './App.css'
 import { getMeteo } from "./api/openmeteoApi";
+import Header from "./components/Header/Header";
+import "./App.css";
 
 function App() {
   const [meteo, setMeteo] = useState(null);
@@ -25,6 +26,7 @@ function App() {
 
   return (
     <>
+      <Header />
       {meteo ? <h1>{meteo.temperature}</h1> : <h1>Caricamento in corso....</h1>}
     </>
   );

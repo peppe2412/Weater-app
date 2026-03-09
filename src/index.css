@@ -23,8 +23,41 @@
   src: url(/public/assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
 }
 
+*{
+  font-size: 18px;
+}
+
 body {
   font-family: Bricolage-grotesque;
   background-color: var(--neutral-900);
   color: var(--neutral-0);
+}
+
+button{
+  color: var(--neutral-0);
+  border: none;
+  cursor: pointer;
+}
+
+header{
+  padding: 1.5rem 5rem 1.5rem 5rem;
+  display: flex;
+}
+
+.logo-box{
+  flex: 1;
+}
+
+.dropdown-units-box{
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-units{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px 12px 15px;
+  background-color: var(--neutral-700);
+  border-radius: 10px;
 }
