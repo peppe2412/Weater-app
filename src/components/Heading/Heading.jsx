@@ -6,7 +6,7 @@ export default function Heading() {
         <div className="input-container">
           <object
             className="icon-search"
-            data="./public/assets/images/icon-search.svg"
+            data="./assets/images/icon-search.svg"
             type="image/svg+xml"
           >
             Icon search

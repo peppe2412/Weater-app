@@ -3,16 +3,16 @@ export default function Header() {
     <>
       <header>
         <div className="logo-box">
-          <img src="./public/assets/images/logo.svg" alt="Logo" />
+          <img src="./assets/images/logo.svg" alt="Logo" />
         </div>
         <div className="dropdown-units-box">
           <button className="dropdown-units">
             <div style={{display: "flex", alignItems: "center"}}>
-              <img src="./public/assets/images/icon-units.svg" alt="icon-units" />
+              <img src="./assets/images/icon-units.svg" alt="icon-units" />
             </div>
             Units
             <div>
-              <img src="./public/assets/images/icon-dropdown.svg" alt="icon-dropdown" />
+              <img src="./assets/images/icon-dropdown.svg" alt="icon-dropdown" />
             </div>
           </button>
         </div>
