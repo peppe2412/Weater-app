@@ -11,7 +11,11 @@ export default function Heading() {
           >
             Icon search
           </object>
-          <input name="searchMeteo" type="text" placeholder="Search for a place..." />
+          <input
+            name="searchMeteo"
+            type="text"
+            placeholder="Search for a place..."
+          />
           <button className="button-search">Search</button>
         </div>
       </section>

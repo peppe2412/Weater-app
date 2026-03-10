@@ -78,27 +78,29 @@ header{
   position: relative;
   display: flex;
   margin-top: 50px;
+  max-width: 100%;
 }
 
 input[name="searchMeteo"]{
   background-color: var(--neutral-700);
   border: none;
-  padding: 15px 3rem 15px 3rem;
+  padding: 0.8rem 3rem 0.8rem 3rem;
   border-radius: 10px;
   font-size: medium;
+  width: 22rem;
   color: var(--neutral-0);
 }
 
 .icon-search{
   position: absolute;
-  left: 10px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
 }
 
 .button-search{
   background-color: var(--blue-500);
-  padding: 15px;
+  padding: 10px 20px 10px 20px;
   margin-left: 10px;
   border-radius: 10px;
   font-size: medium;
