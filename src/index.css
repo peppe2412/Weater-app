@@ -1,3 +1,10 @@
+/* Tailwind */
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: false;
+}
+
+/* Css main */
 :root {
   --neutral-900: hsl(243, 96%, 9%);
   --neutral-800: hsl(243, 27%, 20%);
@@ -23,7 +30,7 @@
   src: url(/public/assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz\,wdth\,wght.ttf);
 }
 
-*{
+* {
   font-size: 18px;
 }
 
@@ -33,32 +40,31 @@ body {
   color: var(--neutral-0);
 }
 
-h1{
+h1 {
   font-size: 2.5rem;
 }
 
-
-button{
+button {
   color: var(--neutral-0);
   border: none;
   cursor: pointer;
 }
 
-header{
+header {
   padding: 1.5rem 5rem 1.5rem 5rem;
   display: flex;
 }
 
-.logo-box{
+.logo-box {
   flex: 1;
 }
 
-.dropdown-units-box{
+.dropdown-units-box {
   display: flex;
   align-items: center;
 }
 
-.dropdown-units{
+.dropdown-units {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -67,21 +73,21 @@ header{
   border-radius: 10px;
 }
 
-.heading-section{
+.heading-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.input-container{
+.input-container {
   position: relative;
   display: flex;
   margin-top: 50px;
   max-width: 100%;
 }
 
-input[name="searchMeteo"]{
+input[name="searchMeteo"] {
   background-color: var(--neutral-700);
   border: none;
   padding: 0.8rem 3rem 0.8rem 3rem;
@@ -91,14 +97,14 @@ input[name="searchMeteo"]{
   color: var(--neutral-0);
 }
 
-.icon-search{
+.icon-search {
   position: absolute;
   left: 15px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.button-search{
+.button-search {
   background-color: var(--blue-500);
   padding: 10px 20px 10px 20px;
   margin-left: 10px;
@@ -107,6 +113,6 @@ input[name="searchMeteo"]{
   transition: 0.3s;
 }
 
-.button-search:hover{
+.button-search:hover {
   background-color: var(--blue-700);
 }
