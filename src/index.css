@@ -73,6 +73,19 @@ header {
   border-radius: 10px;
 }
 
+.menu-units{
+  background-color: var(--neutral-700);
+  width: 200px;
+}
+
+.menu-units-link{
+  transition: 0.3s;
+}
+
+.menu-units-link:hover{
+  background-color: var(--neutral-600);
+}
+
 .heading-section {
   display: flex;
   flex-direction: column;
