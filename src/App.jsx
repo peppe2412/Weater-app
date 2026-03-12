@@ -1,27 +1,30 @@
 import { useState, useEffect } from "react";
-import { getMeteo } from "./api/openmeteoApi";
+import { getMeteoByCity } from "./api/openmeteoApi";
 import Header from "./components/Header/Header";
 // import Heading from "./components/Heading/Heading";
 import "./App.css";
 
 function App() {
+  const [city, setCity] = useState("");
   const [meteo, setMeteo] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    const loadMeteo = async () => {
-      try {
-        setLoading(true);
-        const getData = await getMeteo();
-        setMeteo(getData.current_weather);
-      } catch (error) {
-        console.error("Errore: " + error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    loadMeteo();
-  }, []);
+  // useEffect(() => {
+  const loadMeteoSearch = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const getData = await getMeteoByCity(city);
+      setMeteo(getData);
+      setCity("");
+    } catch (error) {
+      console.error("Errore: " + error);
+    } finally {
+      setLoading(false);
+    }
+  };
+  // loadMeteoSearch();
+  // }, []);
 
   if (loading) return <span>Carimento in corso</span>;
 
@@ -42,14 +45,30 @@ function App() {
             >
               Icon search
             </object>
-            <input
-              name="searchMeteo"
-              type="text"
-              placeholder="Search for a place..."
-            />
-            <button className="button-search">Search</button>
+            <form method="post" onSubmit={loadMeteoSearch}>
+              <input
+                onChange={(e) => setCity(e.target.value)}
+                name="searchMeteo"
+                type="text"
+                value={city}
+                placeholder="Search for a place..."
+              />
+              <button type="submit" className="button-search">
+                Search
+              </button>
+            </form>
           </div>
         </section>
+
+        <div>
+          {meteo &&
+            !loading &&(
+              <>
+                <p>{meteo.city}</p>
+                <p>{meteo.weather.temperature} C°</p>
+              </>
+            )}
+        </div>
       </main>
     </>
   );
